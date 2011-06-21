@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GeoStoreDB" Class="GeoStoreModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PPSHORIZON307;Initial Catalog=GeoStoreDB;Persist Security Info=True;User ID=shakir" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GeoStoreDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.cellLocation" Member="CellLocations">
+    <Type Name="CellLocation">
+      <Column Name="type" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lac" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="baseStationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="baseStationLatitude" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="baseStationLongitude" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="networkId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="systemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="entryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="cellLocation_neighboringCell" Member="NeighboringCells" ThisKey="id" OtherKey="cellLocationId" Type="NeighboringCell" />
+      <Association Name="entry_cellLocation" Member="Entry" ThisKey="entryId" OtherKey="id" Type="Entry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wifi" Member="Wifis">
+    <Type Name="Wifi">
+      <Column Name="ssid" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="capabilities" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="frequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[level]" Member="level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bssid" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="entryID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="entry_wifi" Member="Entry" ThisKey="entryID" OtherKey="id" Type="Entry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dataConnection" Member="DataConnections">
+    <Type Name="DataConnection">
+      <Column Name="state" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="networkType" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="entryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="entry_dataConnection" Member="Entry" ThisKey="entryId" OtherKey="id" Type="Entry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.entry" Member="Entries">
+    <Type Name="Entry">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="deviceId" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="externalTimestamp" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="entry_cellLocation" Member="CellLocations" ThisKey="id" OtherKey="entryId" Type="CellLocation" />
+      <Association Name="entry_wifi" Member="Wifis" ThisKey="id" OtherKey="entryID" Type="Wifi" />
+      <Association Name="entry_dataConnection" Member="DataConnections" ThisKey="id" OtherKey="entryId" Type="DataConnection" />
+      <Association Name="entry_location" Member="Locations" ThisKey="id" OtherKey="entryID" Type="Location" />
+      <Association Name="entry_serviceState" Member="ServiceStates" ThisKey="id" OtherKey="entryID" Type="ServiceState" />
+      <Association Name="entry_signalStrength" Member="SignalStrengths" ThisKey="id" OtherKey="entryId" Type="SignalStrength" />
+    </Type>
+  </Table>
+  <Table Name="dbo.location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="accuracy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="altitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="bearing" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="longitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="provider" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="speed" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="extras" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="measurementTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="entryID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="processingMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="deviceType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="deviceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sensorType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sensorModel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IntersensorAgreement" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="solutionConfidence" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="entry_location" Member="Entry" ThisKey="entryID" OtherKey="id" Type="Entry" IsForeignKey="true" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId1">
+      <Argument Parameter="accuracy" Member="accuracy" />
+      <Argument Parameter="altitude" Member="altitude" />
+      <Argument Parameter="bearing" Member="bearing" />
+      <Argument Parameter="latitude" Member="latitude" />
+      <Argument Parameter="longitude" Member="longitude" />
+      <Argument Parameter="provider" Member="provider" />
+      <Argument Parameter="speed" Member="speed" />
+      <Argument Parameter="extras" Member="extras" />
+      <Argument Parameter="measurementTime" Member="measurementTime" />
+      <Argument Parameter="entryID" Member="entryID" />
+      <Argument Parameter="processingMethod" Member="processingMethod" />
+      <Argument Parameter="deviceType" Member="deviceType" />
+      <Argument Parameter="deviceId" Member="deviceId" />
+      <Argument Parameter="sensorType" Member="sensorType" />
+      <Argument Parameter="sensorModel" Member="sensorModel" />
+      <Argument Parameter="intersensorAgreement" Member="IntersensorAgreement" />
+      <Argument Parameter="solutionConfidence" Member="solutionConfidence" />
+    </InsertFunction>
+  </Table>
+  <Table Name="dbo.neighboringCell" Member="NeighboringCells">
+    <Type Name="NeighboringCell">
+      <Column Name="cid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lac" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="psc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rssi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="networkType" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cellLocationId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="entryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="cellLocation_neighboringCell" Member="CellLocation" ThisKey="cellLocationId" OtherKey="id" Type="CellLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.serviceState" Member="ServiceStates">
+    <Type Name="ServiceState">
+      <Column Name="isManualSelection" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="operatorAlphaLong" Type="System.String" DbType="NChar(16)" CanBeNull="true" />
+      <Column Name="operatorAlphaShort" Type="System.String" DbType="NChar(8)" CanBeNull="true" />
+      <Column Name="operatorNumeric" Type="System.String" DbType="NChar(6)" CanBeNull="true" />
+      <Column Name="roaming" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="entryID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="entry_serviceState" Member="Entry" ThisKey="entryID" OtherKey="id" Type="Entry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.signalStrength" Member="SignalStrengths">
+    <Type Name="SignalStrength">
+      <Column Name="cdmaDbm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cdmaEcio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="evdoDbm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="evdoEcio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="evdoSnr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gsmBitErrorRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gsmSingalStrength" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isGsm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="entryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="entry_signalStrength" Member="Entry" ThisKey="entryId" OtherKey="id" Type="Entry" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="Users">
+    <Type Name="User">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="jabber_id" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Id="FunctionId1" Name="dbo.InsertLocation" Method="InsertLocation">
+    <Parameter Name="accuracy" Type="System.Double" DbType="Float" />
+    <Parameter Name="altitude" Type="System.Double" DbType="Float" />
+    <Parameter Name="bearing" Type="System.Double" DbType="Float" />
+    <Parameter Name="latitude" Type="System.Double" DbType="Float" />
+    <Parameter Name="longitude" Type="System.Double" DbType="Float" />
+    <Parameter Name="provider" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="speed" Type="System.Double" DbType="Float" />
+    <Parameter Name="extras" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="measurementTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="entryID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="processingMethod" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="deviceType" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="deviceId" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sensorType" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sensorModel" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IntersensorAgreement" Parameter="intersensorAgreement" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="solutionConfidence" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\personalContainer" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Microsoft.WindowsAzure.Diagnostics.xml" publishTime="02/27/2011 13:48:10" />
+    <file relUrl="Web.config" publishTime="06/07/2011 11:38:55" />
+    <file relUrl="bin/GeoStoreServiceWebRole.dll" publishTime="06/07/2011 11:38:59" />
+    <file relUrl="bin/GeoStoreServiceWebRole.pdb" publishTime="06/07/2011 11:38:59" />
+    <file relUrl="bin/Microsoft.WindowsAzure.StorageClient.xml" publishTime="02/14/2011 21:13:54" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="04/23/2011 13:29:24" />
+    <file relUrl="GeoStoreService.svc" publishTime="05/11/2011 10:48:38" />
+    <file relUrl="bin/Microsoft.WindowsAzure.StorageClient.dll" publishTime="02/27/2011 16:44:20" />
+    <file relUrl="bin/Microsoft.WindowsAzure.Diagnostics.dll" publishTime="02/27/2011 16:44:18" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 21.625" name="GeoStoreModel">
+  <DataContextMoniker Name="/GeoStoreModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3ae0930b-e0ab-41ff-a48a-20a23465faf8" absoluteBounds="3.5, 10.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/CellLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fcba636-2f27-4c02-8fad-05205241fcba" absoluteBounds="3.515, 10.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6016d10c-5dab-419f-821b-8b2e173fe912" absoluteBounds="3.5, 4.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/Wifi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94300482-80e6-4271-8580-5350ce3d27b2" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5d61329-c10d-4d1e-b58f-b3a978d215b8" absoluteBounds="3.5, 1.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/DataConnection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02d59a32-1ec2-4955-b874-942d39ef453c" absoluteBounds="3.515, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" absoluteBounds="0.75, 10.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/Entry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87ae658e-b87a-42f8-9285-7e3a9bece47c" absoluteBounds="0.765, 11.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e69e534-4329-4b5e-831a-f388e960d388" absoluteBounds="3.5, 17.125, 2, 4.2708154296875023">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ac7889f-73a8-4840-b14b-f5f2b24716d8" absoluteBounds="3.515, 17.585, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02122ef9-8285-4bf9-b5b4-32292baf14f3" absoluteBounds="6.25, 10.375, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/NeighboringCell" />
+      <nestedChildShapes>
+        <elementListCompartment Id="163f18ab-c0ff-4c8c-8c68-c2e5553db938" absoluteBounds="6.265, 10.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9c53254-cc22-49aa-804c-245a61d40395" absoluteBounds="3.5, 7, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/ServiceState" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4aa39c9e-997d-496d-abd6-0efa275e14b1" absoluteBounds="3.515, 7.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="939f8a8e-25a7-4a89-b54e-26dd804623a4" absoluteBounds="3.5, 13.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/SignalStrength" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d948c761-134d-4296-aa8e-f2cc6488c30f" absoluteBounds="3.515, 14.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4be1346b-03b3-4c5f-b9f6-045bc77fed09" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/GeoStoreModelDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49375436-a68a-4e7b-9579-f639154a680f" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 11.5392976888021); (3.5 : 11.5392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/Entry/entry_cellLocation" />
+      <nodes>
+        <classShapeMoniker Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" />
+        <classShapeMoniker Id="3ae0930b-e0ab-41ff-a48a-20a23465faf8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 10.75); (1.75 : 5.20274983723958); (2.19791916666667 : 5.20274983723958 : JumpStart); (2.36458583333333 : 5.20274983723958 : JumpEnd); (3.5 : 5.20274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/Entry/entry_wifi" />
+      <nodes>
+        <classShapeMoniker Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" />
+        <classShapeMoniker Id="6016d10c-5dab-419f-821b-8b2e173fe912" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 10.75); (2.2812525 : 2.53929768880208); (3.5 : 2.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/Entry/entry_dataConnection" />
+      <nodes>
+        <classShapeMoniker Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" />
+        <classShapeMoniker Id="e5d61329-c10d-4d1e-b58f-b3a978d215b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 12.3285953776042); (1.75 : 19.2604077148438); (3.5 : 19.2604077148438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/Entry/entry_location" />
+      <nodes>
+        <classShapeMoniker Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" />
+        <classShapeMoniker Id="7e69e534-4329-4b5e-831a-f388e960d388" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.5489005533854); (6.25 : 11.5489005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/CellLocation/cellLocation_neighboringCell" />
+      <nodes>
+        <classShapeMoniker Id="3ae0930b-e0ab-41ff-a48a-20a23465faf8" />
+        <classShapeMoniker Id="02122ef9-8285-4bf9-b5b4-32292baf14f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 10.75); (1.2187475 : 8.17390055338542); (1.66666666666667 : 8.17390055338542 : JumpStart); (1.83333333333333 : 8.17390055338542 : JumpEnd); (2.19791916666667 : 8.17390055338542 : JumpStart); (2.36458583333333 : 8.17390055338542 : JumpEnd); (3.5 : 8.17390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/Entry/entry_serviceState" />
+      <nodes>
+        <classShapeMoniker Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" />
+        <classShapeMoniker Id="c9c53254-cc22-49aa-804c-245a61d40395" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 12.3285953776042); (2.2812525 : 14.9912019856771); (3.5 : 14.9912019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GeoStoreModelDataContext/Entry/entry_signalStrength" />
+      <nodes>
+        <classShapeMoniker Id="0573cfc4-5bcb-4f3d-8863-ffbbeef83a5a" />
+        <classShapeMoniker Id="939f8a8e-25a7-4a89-b54e-26dd804623a4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
