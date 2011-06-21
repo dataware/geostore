@@ -1,0 +1,9 @@
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\bin\GeoStoreServiceWebRole.dll
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\bin\GeoStoreServiceWebRole.pdb
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\bin\Microsoft.WindowsAzure.Diagnostics.dll
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\bin\Microsoft.WindowsAzure.StorageClient.dll
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\bin\Microsoft.WindowsAzure.Diagnostics.xml
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\bin\Microsoft.WindowsAzure.StorageClient.xml
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\obj\Debug\ResolveAssemblyReference.cache
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\obj\Debug\GeoStoreServiceWebRole.dll
+D:\personalContainer\GeoStore\GeoStoreServiceWebRole\obj\Debug\GeoStoreServiceWebRole.pdb

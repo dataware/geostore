@@ -1,0 +1,17 @@
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\GeoStoreClient.exe.config
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\GeoStoreClient.exe
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\GeoStoreClient.pdb
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\GeoStoreServiceWebRole.dll
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.Http.dll
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.Http.Extensions.dll
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Newtonsoft.Json.dll
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\GeoStoreServiceWebRole.pdb
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.Http.pdb
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.Http.Extensions.pdb
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
+D:\personalContainer\GeoStore\GeoStoreClient\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+D:\personalContainer\GeoStore\GeoStoreClient\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\personalContainer\GeoStore\GeoStoreClient\obj\x86\Debug\GeoStoreClient.exe
+D:\personalContainer\GeoStore\GeoStoreClient\obj\x86\Debug\GeoStoreClient.pdb
